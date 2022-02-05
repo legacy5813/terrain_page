@@ -9,6 +9,7 @@ body
 {
     height: 100vh;
     font-family: 'Poppins';
+    background: rgb(27, 27, 31)
 }
 
 .webgl
@@ -17,4 +18,35 @@ body
     top: 0;
     left: 0;
     outline: none;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color:aliceblue;
+    margin: 16em 8em;
+
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p1{
+    font-size: 1.3rem;
+    width: 55%;
+    color:aliceblue
+}
+
+button{
+    font-size: 1.3rem;
+    padding:.5rem 1em;
+    margin-top: 3em;
+    background-color:rgb(16, 92, 255);
+    border: none;
+    color:aliceblue;
+    font-weight: bold;
+    text-transform: uppercase;
 }

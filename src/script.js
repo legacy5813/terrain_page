@@ -94,7 +94,8 @@ scene.add(camera)
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+    canvas: canvas,
+    alpha: true
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -102,6 +103,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Animate
  */
+
 
 const clock = new THREE.Clock()
 
@@ -113,6 +115,8 @@ const tick = () =>
     // Update objects
     //sphere.rotation.y = .5 * elapsedTime
     plane.rotation.z = .5*elapsedTime
+    
+  
 
     // Update Orbital Controls
     // controls.update()
