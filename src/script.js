@@ -24,21 +24,26 @@ const terr_Geo = new THREE.PlaneBufferGeometry(3, 3, 64, 64)
 // Materials
 const material = new THREE.MeshStandardMaterial({
 color: 'gray',
-map: texture})
+map: texture,
+displacementMap: height,
+displacementScale: .4,
+alphaMap: alpha, transparent: true, depthTest: false,
+
+})
  
 const plane = new THREE.Mesh(terr_Geo, material)
 scene.add(plane)
-plane.rotation.x = 181
+plane.rotation.x = 5.2
 gui.add(plane.rotation, 'x').min(0).max(12)
 // Mesh
 
 
 // Lights
 
-const pointLight = new THREE.PointLight(0xffffff, 2)
-pointLight.position.x = 2
-pointLight.position.y = 3
-pointLight.position.z = 4
+const pointLight = new THREE.PointLight(0x00b3ff, 2)
+pointLight.position.x = -1.4
+pointLight.position.y = 3.9
+pointLight.position.z = 1
 scene.add(pointLight)
 
 gui.add(pointLight.position, 'x')
@@ -107,6 +112,7 @@ const tick = () =>
 
     // Update objects
     //sphere.rotation.y = .5 * elapsedTime
+    plane.rotation.z = .5*elapsedTime
 
     // Update Orbital Controls
     // controls.update()
